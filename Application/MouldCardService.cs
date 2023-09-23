@@ -1,4 +1,4 @@
-using Moulding.Domain;
+using Moulding.Domain.MouldCards;
 
 namespace Moulding.Application;
 

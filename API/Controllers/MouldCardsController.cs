@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Moulding.Application;
-using Moulding.Domain;
+using Moulding.Domain.MouldCards;
 
 namespace API.Controllers;
 

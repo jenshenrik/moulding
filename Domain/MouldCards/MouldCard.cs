@@ -1,4 +1,4 @@
-namespace Moulding.Domain;
+namespace Moulding.Domain.MouldCards;
 
 /// <summary>
 /// Mould card entity class

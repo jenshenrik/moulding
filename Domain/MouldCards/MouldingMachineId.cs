@@ -1,20 +1,20 @@
-namespace Moulding.Domain;
+namespace Moulding.Domain.MouldCards;
 
 /// <summary>
 /// Moulding machine ID value type.
 /// </summary>
 public record MouldingMachineId
 {
-    public Guid Id { get; private set; }
+    public Guid Value { get; private set; }
 
     private MouldingMachineId()
     {
-        Id = Guid.NewGuid();
+        Value = Guid.NewGuid();
     }
 
-    private MouldingMachineId(Guid id)
+    private MouldingMachineId(Guid value)
     {
-        Id = id;
+        Value = value;
     }
 
     /// <summary>
@@ -31,10 +31,10 @@ public record MouldingMachineId
     /// Create an instance of a moulding machine ID with a given value.
     /// Should be used when recreating existing machine IDs.
     /// </summary>
-    /// <param name="id">The ID of the machine</param>
+    /// <param name="value">The ID of the machine</param>
     /// <returns></returns>
-    public static MouldingMachineId Create(Guid id)
+    public static MouldingMachineId Create(Guid value)
     {
-        return new MouldingMachineId(id);
+        return new MouldingMachineId(value);
     }
 }

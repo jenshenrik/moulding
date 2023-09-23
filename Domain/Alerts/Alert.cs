@@ -1,3 +1,5 @@
+using Moulding.Domain.MouldCards;
+
 namespace Moulding.Domain.Alerts;
 
 /// <summary>

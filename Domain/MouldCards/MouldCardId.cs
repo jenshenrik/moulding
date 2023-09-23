@@ -1,20 +1,20 @@
-namespace Moulding.Domain;
+namespace Moulding.Domain.MouldCards;
 
 /// <summary>
 /// Mould card ID value type.
 /// </summary>
 public record MouldCardId
 {
-    public Guid Id { get; private set; }
+    public Guid Value { get; private set; }
 
     private MouldCardId()
     {
-        Id = Guid.NewGuid();
+        Value = Guid.NewGuid();
     }
 
-    private MouldCardId(Guid id)
+    private MouldCardId(Guid value)
     {
-        Id = id;
+        Value = value;
     }
 
     /// <summary>
@@ -31,10 +31,10 @@ public record MouldCardId
     /// Create an instance of a mould card ID with a given value.
     /// Should be used when recreating existing card IDs.
     /// </summary>
-    /// <param name="id">The ID of the mould card</param>
+    /// <param name="value">The ID of the mould card</param>
     /// <returns></returns>
-    public static MouldCardId Create(Guid id)
+    public static MouldCardId Create(Guid value)
     {
-        return new MouldCardId(id);
+        return new MouldCardId(value);
     }
 }
