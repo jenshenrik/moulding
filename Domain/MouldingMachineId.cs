@@ -29,7 +29,7 @@ public record MouldingMachineId
 
     /// <summary>
     /// Create an instance of a moulding machine ID with a given value.
-    /// Should be used when creating new instances of existing machine IDs.
+    /// Should be used when recreating existing machine IDs.
     /// </summary>
     /// <param name="id">The ID of the machine</param>
     /// <returns></returns>

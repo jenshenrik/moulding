@@ -29,7 +29,7 @@ public record MouldCardId
 
     /// <summary>
     /// Create an instance of a mould card ID with a given value.
-    /// Should be used when creating new instances of existing card IDs.
+    /// Should be used when recreating existing card IDs.
     /// </summary>
     /// <param name="id">The ID of the mould card</param>
     /// <returns></returns>
