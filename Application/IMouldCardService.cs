@@ -5,5 +5,5 @@ namespace Moulding.Application;
 public interface IMouldCardService
 {
     Task<IEnumerable<MouldCard>> GetAllMouldCardsAsync();
-    Task<IEnumerable<MouldCard>> GetMouldCardsAsync(MouldingMachineId mouldingMachineId);
+    Task<MouldCard?> GetMouldCardByIdAsync(Guid mouldCardId);
 }

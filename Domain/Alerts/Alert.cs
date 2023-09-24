@@ -54,7 +54,7 @@ public class Alert
     /// <param name="expectedValue">The expected value from the mould card</param>
     /// <param name="actualValue">The actual value from the machine</param>
     /// <returns></returns>
-    public static Alert Create(
+    internal static Alert Create(
         MouldCardId mouldCardId,
         string property,
         string expectedValue,
@@ -74,7 +74,7 @@ public class Alert
     /// <param name="expectedValue">The expected value from the mould card</param>
     /// <param name="actualValue">The actual value from the machine</param>
     /// <returns></returns>
-    public static Alert Create(
+    internal static Alert Create(
         AlertId alertId,
         MouldCardId mouldCardId,
         string property,

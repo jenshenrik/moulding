@@ -4,15 +4,21 @@ namespace Moulding.Application;
 
 public class MouldCardService : IMouldCardService
 {
-    public async Task<IEnumerable<MouldCard>> GetAllMouldCardsAsync()
+    private readonly IMouldCardRepository _mouldCardRepository;
+
+    public MouldCardService(IMouldCardRepository mouldCardRepository)
     {
-        return new List<MouldCard>();
+        _mouldCardRepository = mouldCardRepository;
     }
 
-    public async Task<IEnumerable<MouldCard>> GetMouldCardsAsync(
-        MouldingMachineId mouldingMachineId
-    )
+    public async Task<IEnumerable<MouldCard>> GetAllMouldCardsAsync()
     {
-        return new List<MouldCard>();
+        return await _mouldCardRepository.GetAllAsync();
+    }
+
+    public async Task<MouldCard?> GetMouldCardByIdAsync(Guid mouldCardId)
+    {
+        var id = MouldCardId.Create(mouldCardId);
+        return await _mouldCardRepository.GetByIdAsync(id);
     }
 }
