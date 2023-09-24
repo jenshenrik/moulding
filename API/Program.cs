@@ -1,6 +1,7 @@
 using Moulding.Application;
-using Moulding.Domain.MouldCards;
-using Moulding.Infrastructure;
+using Moulding.Infrastructure.MouldCardRepository;
+using Moulding.Infrastructure.MouldingMachineClient;
+using Moulding.Infrastructure.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IAuditService, AuditService>();
 builder.Services.AddScoped<IMouldCardService, MouldCardService>();
+builder.Services.AddScoped<IMouldingMachineClient, MouldingMachineClient>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddSingleton<IMouldCardRepository, MouldCardRepository>();
 

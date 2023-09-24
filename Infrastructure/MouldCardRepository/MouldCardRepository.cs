@@ -1,7 +1,7 @@
 using Moulding.Domain;
 using Moulding.Domain.MouldCards;
 
-namespace Moulding.Infrastructure;
+namespace Moulding.Infrastructure.MouldCardRepository;
 
 public class MouldCardRepository : IMouldCardRepository
 {
@@ -26,6 +26,14 @@ public class MouldCardRepository : IMouldCardRepository
                 210f,
                 PressureValue.Create(65, "PSI"),
                 PressureValue.Create(76, "Bar")
+            ),
+            MouldCard.Create(
+                MouldingMachineId.Create(),
+                10,
+                2,
+                190f,
+                PressureValue.Create(65, "PSI"),
+                PressureValue.Create(66, "Bar")
             )
         };
     }

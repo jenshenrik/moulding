@@ -1,4 +1,5 @@
 using Moulding.Domain.MouldCards;
+using Moulding.Infrastructure.MouldCardRepository;
 
 namespace Moulding.Application;
 

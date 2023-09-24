@@ -1,4 +1,6 @@
-namespace Moulding.Domain.MouldCards;
+using Moulding.Domain.MouldCards;
+
+namespace Moulding.Infrastructure.MouldCardRepository;
 
 public interface IMouldCardRepository
 {
