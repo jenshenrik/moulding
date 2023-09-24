@@ -1,4 +1,6 @@
 using Moulding.Application;
+using Moulding.Domain.MouldCards;
+using Moulding.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +12,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IMouldCardService, MouldCardService>();
+builder.Services.AddScoped<IAuditService, AuditService>();
+builder.Services.AddScoped<IMouldCardService, MouldCardService>();
+
+builder.Services.AddSingleton<IMouldCardRepository, MouldCardRepository>();
 
 var app = builder.Build();
 

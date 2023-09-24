@@ -20,9 +20,15 @@ public class MouldCardsController : ControllerBase
         _mouldCardService = mouldCardService;
     }
 
-    [HttpGet(Name = nameof(GetAllMouldCardsAsync))]
+    [HttpGet("/", Name = nameof(GetAllMouldCardsAsync))]
     public async Task<ActionResult<IEnumerable<MouldCard>>> GetAllMouldCardsAsync()
     {
         return Ok(await _mouldCardService.GetAllMouldCardsAsync());
+    }
+
+    [HttpGet("/{mouldCardId}", Name = nameof(GetMouldCardByIdAsync))]
+    public async Task<ActionResult<MouldCard>> GetMouldCardByIdAsync(Guid mouldCardId)
+    {
+        return Ok(await _mouldCardService.GetMouldCardByIdAsync(mouldCardId));
     }
 }
