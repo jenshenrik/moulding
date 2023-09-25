@@ -12,17 +12,12 @@ public class Audit
     public DateTime CreatedAtUtc { get; private set; }
     public IReadOnlyCollection<Alert> Alerts => _alerts;
 
-    private Audit(MouldCard mouldCard)
+    public Audit(MouldCard mouldCard)
     {
-        Id = AuditId.Create();
+        Id = new AuditId();
         MouldCard = mouldCard;
         CreatedAtUtc = DateTime.UtcNow;
         _alerts = new List<Alert>();
-    }
-
-    public static Audit Create(MouldCard mouldCard)
-    {
-        return new Audit(mouldCard);
     }
 
     public void PerformProcessAudit(MouldingMachineReading machineValues)
@@ -75,7 +70,7 @@ public class Audit
 
     private Alert RaiseAlert(string property, string expectedValue, string actualValue)
     {
-        var alert = Alert.Create(MouldCard.Id, property, expectedValue, actualValue);
+        var alert = new Alert(MouldCard.Id, property, expectedValue, actualValue);
         _alerts.Add(alert);
         return alert;
     }

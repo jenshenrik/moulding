@@ -19,7 +19,7 @@ public class MouldCardService : IMouldCardService
 
     public async Task<MouldCard?> GetMouldCardByIdAsync(Guid mouldCardId)
     {
-        var id = MouldCardId.Create(mouldCardId);
+        var id = new MouldCardId(mouldCardId);
         return await _mouldCardRepository.GetByIdAsync(id);
     }
 }

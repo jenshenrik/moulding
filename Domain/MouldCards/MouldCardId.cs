@@ -7,24 +7,14 @@ public record MouldCardId
 {
     public Guid Value { get; private set; }
 
-    private MouldCardId()
-    {
-        Value = Guid.NewGuid();
-    }
-
-    private MouldCardId(Guid value)
-    {
-        Value = value;
-    }
-
     /// <summary>
     /// Create a new instance of a mould card ID.
     /// Should be used when generating new IDs
     /// </summary>
     /// <returns></returns>
-    public static MouldCardId Create()
+    public MouldCardId()
     {
-        return new MouldCardId();
+        Value = Guid.NewGuid();
     }
 
     /// <summary>
@@ -33,8 +23,8 @@ public record MouldCardId
     /// </summary>
     /// <param name="value">The ID of the mould card</param>
     /// <returns></returns>
-    public static MouldCardId Create(Guid value)
+    public MouldCardId(Guid value)
     {
-        return new MouldCardId(value);
+        Value = value;
     }
 }

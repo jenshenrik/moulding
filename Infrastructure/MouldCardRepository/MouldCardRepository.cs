@@ -11,29 +11,29 @@ public class MouldCardRepository : IMouldCardRepository
     {
         _mouldCards = new List<MouldCard>
         {
-            MouldCard.Create(
+            new MouldCard(
                 MouldingMachineId.Create(),
                 12,
                 5,
                 190f,
-                PressureValue.Create(45, "Bar"),
-                PressureValue.Create(55, "Bar")
+                new PressureValue(45, "Bar"),
+                new PressureValue(55, "Bar")
             ),
-            MouldCard.Create(
+            new MouldCard(
                 MouldingMachineId.Create(),
                 15,
                 7,
                 210f,
-                PressureValue.Create(65, "PSI"),
-                PressureValue.Create(76, "Bar")
+                new PressureValue(65, "PSI"),
+                new PressureValue(76, "Bar")
             ),
-            MouldCard.Create(
+            new MouldCard(
                 MouldingMachineId.Create(),
                 10,
                 2,
                 190f,
-                PressureValue.Create(65, "PSI"),
-                PressureValue.Create(66, "Bar")
+                new PressureValue(65, "PSI"),
+                new PressureValue(66, "Bar")
             )
         };
     }

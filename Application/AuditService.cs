@@ -28,7 +28,7 @@ public class AuditService : IAuditService
     {
         MouldCard mouldCard = await GetMouldCard(mouldCardId);
 
-        var audit = Audit.Create(mouldCard);
+        var audit = new Audit(mouldCard);
 
         var machineValues = await _mouldingMachineClient.ReadMachineValues(
             mouldCard.MouldingMachineId
@@ -43,12 +43,12 @@ public class AuditService : IAuditService
 
     private async Task<MouldCard> GetMouldCard(Guid mouldCardId)
     {
-        var mouldCard = await _mouldCardRepository.GetByIdAsync(MouldCardId.Create(mouldCardId));
+        var mouldCard = await _mouldCardRepository.GetByIdAsync(new MouldCardId(mouldCardId));
         if (mouldCard == null)
         {
             throw new ArgumentException($"No mould card with id {mouldCardId} found.");
         }
 
-        return mouldCard;
+        return mouldCard!;
     }
 }

@@ -4,23 +4,13 @@ public record AuditId
 {
     public Guid Value { get; private set; }
 
-    private AuditId()
+    public AuditId()
     {
         Value = Guid.NewGuid();
     }
 
-    private AuditId(Guid value)
+    public AuditId(Guid value)
     {
         Value = value;
-    }
-
-    public static AuditId Create()
-    {
-        return new AuditId();
-    }
-
-    public static AuditId Create(Guid value)
-    {
-        return new AuditId(value);
     }
 }

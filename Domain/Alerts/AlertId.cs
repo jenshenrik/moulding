@@ -7,24 +7,14 @@ public record AlertId
 {
     public Guid Value { get; private set; }
 
-    private AlertId()
-    {
-        Value = Guid.NewGuid();
-    }
-
-    private AlertId(Guid value)
-    {
-        Value = value;
-    }
-
     /// <summary>
     /// Create a new instance of an alert ID.
     /// Should be used when generating new IDs
     /// </summary>
     /// <returns></returns>
-    public static AlertId Create()
+    public AlertId()
     {
-        return new AlertId();
+        Value = Guid.NewGuid();
     }
 
     /// <summary>
@@ -33,8 +23,8 @@ public record AlertId
     /// </summary>
     /// <param name="value">The ID of the alert</param>
     /// <returns></returns>
-    public static AlertId Create(Guid value)
+    public AlertId(Guid value)
     {
-        return new AlertId(value);
+        Value = value;
     }
 }

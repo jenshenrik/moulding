@@ -13,8 +13,8 @@ public class MouldingMachineClient : IMouldingMachineClient
                 10,
                 2,
                 190f,
-                PressureValue.Create(65, "PSI"),
-                PressureValue.Create(66, "Bar")
+                new PressureValue(65, "PSI"),
+                new PressureValue(66, "Bar")
             )
         );
     }
