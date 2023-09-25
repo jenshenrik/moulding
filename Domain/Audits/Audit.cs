@@ -70,7 +70,7 @@ public class Audit
 
     private Alert RaiseAlert(string property, string expectedValue, string actualValue)
     {
-        var alert = new Alert(MouldCard.Id, property, expectedValue, actualValue);
+        var alert = new Alert(Id, property, expectedValue, actualValue);
         _alerts.Add(alert);
         return alert;
     }
