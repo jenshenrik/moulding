@@ -24,19 +24,19 @@ public class MouldCardsController : ControllerBase
         _auditService = auditService;
     }
 
-    [HttpGet("/", Name = nameof(GetAllMouldCardsAsync))]
+    [HttpGet(Name = nameof(GetAllMouldCardsAsync))]
     public async Task<ActionResult<IEnumerable<MouldCard>>> GetAllMouldCardsAsync()
     {
         return Ok(await _mouldCardService.GetAllMouldCardsAsync());
     }
 
-    [HttpGet("/{mouldCardId}", Name = nameof(GetMouldCardByIdAsync))]
+    [HttpGet("{mouldCardId}", Name = nameof(GetMouldCardByIdAsync))]
     public async Task<ActionResult<MouldCard>> GetMouldCardByIdAsync(Guid mouldCardId)
     {
         return Ok(await _mouldCardService.GetMouldCardByIdAsync(mouldCardId));
     }
 
-    [HttpPost("/{mouldCardId}/audit", Name = nameof(RunProcessAudit))]
+    [HttpPost("{mouldCardId}/audit", Name = nameof(RunProcessAudit))]
     public async Task<ActionResult<IEnumerable<Alert>>> RunProcessAudit(Guid mouldCardId)
     {
         try
