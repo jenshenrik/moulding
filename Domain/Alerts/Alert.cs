@@ -1,4 +1,4 @@
-using Moulding.Domain.MouldCards;
+using Moulding.Domain.Audits;
 
 namespace Moulding.Domain.Alerts;
 
@@ -8,7 +8,7 @@ namespace Moulding.Domain.Alerts;
 public class Alert
 {
     public AlertId Id { get; private set; }
-    public MouldCardId MouldCardId { get; private set; }
+    public AuditId AuditId { get; private set; }
     public string Property { get; private set; }
     public string ExpectedValue { get; private set; }
     public string ActualValue { get; private set; }
@@ -17,15 +17,15 @@ public class Alert
     /// Create an instance of the alert entity.
     /// Should be used when generating new alerts.
     /// </summary>
-    /// <param name="mouldCardId">The ID of the corresponding mould card</param>
+    /// <param name="auditId">The ID of the corresponding audit</param>
     /// <param name="property">The property that was is off</param>
     /// <param name="expectedValue">The expected value from the mould card</param>
     /// <param name="actualValue">The actual value from the machine</param>
     /// <returns></returns>
-    public Alert(MouldCardId mouldCardId, string property, string expectedValue, string actualValue)
+    public Alert(AuditId auditId, string property, string expectedValue, string actualValue)
     {
         Id = new AlertId();
-        MouldCardId = mouldCardId;
+        AuditId = auditId;
         Property = property;
         ExpectedValue = expectedValue;
         ActualValue = actualValue;
@@ -36,21 +36,21 @@ public class Alert
     /// Should be used when recreating existing alerts.
     /// </summary>
     /// <param name="alertId">The ID of the alert entity</param>
-    /// <param name="mouldCardId">The ID of the corresponding mould card</param>
+    /// <param name="auditId">The ID of the corresponding audit</param>
     /// <param name="property">The property that was is off</param>
     /// <param name="expectedValue">The expected value from the mould card</param>
     /// <param name="actualValue">The actual value from the machine</param>
     /// <returns></returns>
     public Alert(
         AlertId alertId,
-        MouldCardId mouldCardId,
+        AuditId auditId,
         string property,
         string expectedValue,
         string actualValue
     )
     {
         Id = alertId;
-        MouldCardId = mouldCardId;
+        AuditId = auditId;
         Property = property;
         ExpectedValue = expectedValue;
         ActualValue = actualValue;
