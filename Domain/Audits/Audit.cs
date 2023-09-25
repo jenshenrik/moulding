@@ -3,6 +3,10 @@ using Moulding.Domain.MouldCards;
 
 namespace Moulding.Domain.Audits;
 
+/// <summary>
+/// Audit aggregate. Holds logic to audit its mould card against
+/// a set of moulding machine values and raise alerts if relevant.
+/// </summary>
 public class Audit
 {
     private List<Alert> _alerts;
@@ -12,6 +16,10 @@ public class Audit
     public DateTime CreatedAtUtc { get; private set; }
     public IReadOnlyCollection<Alert> Alerts => _alerts;
 
+    /// <summary>
+    /// Create a new audit of a mould card.
+    /// </summary>
+    /// <param name="mouldCard">The mould card to audit.</param>
     public Audit(MouldCard mouldCard)
     {
         Id = new AuditId();

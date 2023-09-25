@@ -11,7 +11,6 @@ public record AlertId
     /// Create a new instance of an alert ID.
     /// Should be used when generating new IDs
     /// </summary>
-    /// <returns></returns>
     public AlertId()
     {
         Value = Guid.NewGuid();
@@ -22,7 +21,6 @@ public record AlertId
     /// Should be used when recreating existing alert IDs.
     /// </summary>
     /// <param name="value">The ID of the alert</param>
-    /// <returns></returns>
     public AlertId(Guid value)
     {
         Value = value;

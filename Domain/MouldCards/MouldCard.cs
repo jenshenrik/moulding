@@ -23,7 +23,6 @@ public class MouldCard
     /// <param name="inletTemperatureInCelcius">The temperature at the inlet where materials flow through, measured in Celsius</param>
     /// <param name="airflow">The pressure of the airflow to cool down the mould, measured in psi or bar</param>
     /// <param name="waterflow">The pressure of the waterflow to cool down the mould, measured in psi or bar</param>
-    /// <returns>A new instance of a mould card</returns>
     public MouldCard(
         MouldingMachineId mouldingMachineId,
         int cycleTimeInSeconds,
@@ -53,7 +52,6 @@ public class MouldCard
     /// <param name="inletTemperatureInCelcius">The temperature at the inlet where materials flow through, measured in Celsius</param>
     /// <param name="airflow">The pressure of the airflow to cool down the mould, measured in psi or bar</param>
     /// <param name="waterflow">The pressure of the waterflow to cool down the mould, measured in psi or bar</param>
-    /// <returns>A new instance of a mould card</returns>
     public MouldCard(
         MouldCardId mouldCardId,
         MouldingMachineId mouldingMachineId,

@@ -21,7 +21,6 @@ public record MouldingMachineId
     /// Create a new instance of a moulding machine ID.
     /// Should be used when generating new IDs
     /// </summary>
-    /// <returns></returns>
     public static MouldingMachineId Create()
     {
         return new MouldingMachineId();
@@ -32,7 +31,6 @@ public record MouldingMachineId
     /// Should be used when recreating existing machine IDs.
     /// </summary>
     /// <param name="value">The ID of the machine</param>
-    /// <returns></returns>
     public static MouldingMachineId Create(Guid value)
     {
         return new MouldingMachineId(value);

@@ -11,7 +11,6 @@ public record MouldCardId
     /// Create a new instance of a mould card ID.
     /// Should be used when generating new IDs
     /// </summary>
-    /// <returns></returns>
     public MouldCardId()
     {
         Value = Guid.NewGuid();
@@ -22,7 +21,6 @@ public record MouldCardId
     /// Should be used when recreating existing card IDs.
     /// </summary>
     /// <param name="value">The ID of the mould card</param>
-    /// <returns></returns>
     public MouldCardId(Guid value)
     {
         Value = value;

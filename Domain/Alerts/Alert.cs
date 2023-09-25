@@ -21,7 +21,6 @@ public class Alert
     /// <param name="property">The property that was is off</param>
     /// <param name="expectedValue">The expected value from the mould card</param>
     /// <param name="actualValue">The actual value from the machine</param>
-    /// <returns></returns>
     public Alert(AuditId auditId, string property, string expectedValue, string actualValue)
     {
         Id = new AlertId();
@@ -40,7 +39,6 @@ public class Alert
     /// <param name="property">The property that was is off</param>
     /// <param name="expectedValue">The expected value from the mould card</param>
     /// <param name="actualValue">The actual value from the machine</param>
-    /// <returns></returns>
     public Alert(
         AlertId alertId,
         AuditId auditId,
