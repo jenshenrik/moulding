@@ -19,7 +19,7 @@ public record MouldingMachineId
 
     /// <summary>
     /// Create a new instance of a moulding machine ID.
-    /// Should be used when generating new IDs
+    /// Should be used when generating new IDs.
     /// </summary>
     public static MouldingMachineId Create()
     {

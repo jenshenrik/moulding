@@ -28,6 +28,13 @@ public class Audit
         _alerts = new List<Alert>();
     }
 
+    /// <summary>
+    /// Perform an audit by comparing the values read from specified moulding machine
+    /// with the audit's mould card.
+    ///
+    /// Generates alerts for any drifting values on this audit.
+    /// </summary>
+    /// <param name="machineValues">The machine values to compare the mould card to.</param>
     public void PerformProcessAudit(MouldingMachineReading machineValues)
     {
         if (MouldCard.CycleTimeInSeconds != machineValues.CycleTimeInSeconds)

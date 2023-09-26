@@ -1,7 +1,7 @@
 namespace Moulding.Domain.Alerts;
 
 /// <summary>
-/// Alert ID value type
+/// Alert ID value type.
 /// </summary>
 public record AlertId
 {
@@ -9,7 +9,7 @@ public record AlertId
 
     /// <summary>
     /// Create a new instance of an alert ID.
-    /// Should be used when generating new IDs
+    /// Should be used when generating new IDs.
     /// </summary>
     public AlertId()
     {

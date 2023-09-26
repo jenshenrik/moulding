@@ -16,24 +16,24 @@ public class MouldCardRepository : IMouldCardRepository
                 12,
                 5,
                 190f,
-                new PressureValue(45, "Bar"),
-                new PressureValue(55, "Bar")
+                PressureValue.Create(45, "Bar"),
+                PressureValue.Create(55, "Bar")
             ),
             new MouldCard(
                 MouldingMachineId.Create(),
                 15,
                 7,
                 210f,
-                new PressureValue(65, "PSI"),
-                new PressureValue(76, "Bar")
+                PressureValue.Create(65, "PSI"),
+                PressureValue.Create(76, "Bar")
             ),
             new MouldCard(
                 MouldingMachineId.Create(),
                 10,
                 2,
                 190f,
-                new PressureValue(65, "PSI"),
-                new PressureValue(66, "Bar")
+                PressureValue.Create(65, "PSI"),
+                PressureValue.Create(66, "Bar")
             )
         };
     }

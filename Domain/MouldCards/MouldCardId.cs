@@ -9,7 +9,7 @@ public record MouldCardId
 
     /// <summary>
     /// Create a new instance of a mould card ID.
-    /// Should be used when generating new IDs
+    /// Should be used when generating new IDs.
     /// </summary>
     public MouldCardId()
     {
