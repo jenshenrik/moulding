@@ -3,7 +3,7 @@
 Small demo project modelling moulding cards and the process audit of manufacturing plastic bricks.
 
 ## Instructions
-Clone project and navigate to the root folder. Start the application by running `dotnet run --project API/API.csproj` or navigate to `API/` and simply run `dotnet run`.
+Clone project (https://github.com/jenshenrik/moulding) and navigate to the root folder. Start the application by running `dotnet run --project API/API.csproj` or navigate to `API/` and simply run `dotnet run`.
 ### Usage
 The above command will start the application on a local development server - check the console for which port it's running on.
 
